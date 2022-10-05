@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="connections">
+    <connection type="Azure.SqlServer:Jetbrains.IJModule" envPrefix="AZURE_SQLSERVER">
+      <resource type="Azure.SqlServer">b1d0fbe98d70f99251b9b9d4ee8fe829</resource>
+      <consumer type="Jetbrains.IJModule">sfm_projekt</consumer>
+    </connection>
+  </component>
+</project>

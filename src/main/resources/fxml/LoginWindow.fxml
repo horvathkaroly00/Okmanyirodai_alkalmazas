@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="580.0" styleClass="ancsorpane" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.GuiController">
+   <children>
+      <Label fx:id="loginInfoLabel" layoutX="157.0" layoutY="371.0" prefHeight="17.0" prefWidth="270.0" styleClass="errorLabel" textFill="#f20101" />
+      <Label layoutX="30.0" layoutY="281.0" styleClass="infoLabel" text="Felhasználónév" />
+      <Label layoutX="30.0" layoutY="333.0" styleClass="infoLabel" text="Jelszó" />
+      <Label layoutX="158.0" layoutY="144.0" styleClass="bigLabel" text="ÜDVÖZÖLJÜK" textAlignment="CENTER">
+         <font>
+            <Font name="SansSerif Regular" size="35.0" />
+         </font>
+      </Label>
+      <Button layoutX="155.0" layoutY="399.0" mnemonicParsing="false" onAction="#login" styleClass="logreg" stylesheets="@../styles/style.css" text="Bejelentkezés" />
+      <Label layoutX="30.0" layoutY="205.0" prefHeight="30.0" prefWidth="556.0" styleClass="infoLabel" text="Kérjük jelentkezzen be, vagy ha még nem rendelkezik fiókkal, kattintson a Regisztráció gombra!" />
+      <ImageView fitHeight="37.0" fitWidth="32.0" layoutX="436.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/name.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="436.0" layoutY="323.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/password_26px.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="titlePane" prefHeight="45.0" prefWidth="580.0" style="-fx-background-color: #DEC69E;">
+         <children>
+            <Button contentDisplay="CENTER" layoutX="540.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnClose" prefHeight="30.0" prefWidth="32.0" styleClass="titlebutton">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="21.0">
+                     <image>
+                        <Image url="@../images/close.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button contentDisplay="BOTTOM" layoutX="505.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnMinimize" prefHeight="30.0" prefWidth="32.0" styleClass="titlebutton">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="21.0">
+                     <image>
+                        <Image url="@../images/icons8_minimize_window_26px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <ImageView layoutX="14.0" layoutY="10.0">
+               <image>
+                  <Image url="@../images/icons8_k_26px_1.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="40.0" layoutY="10.0">
+               <image>
+                  <Image url="@../images/icons8_d_26px_1.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="67.0" layoutY="10.0">
+               <image>
+                  <Image url="@../images/icons8_r_26px_1.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <TextField fx:id="usernameField" layoutX="155.0" layoutY="271.0" prefHeight="37.0" prefWidth="270.0" promptText="Felhasználónév" />
+      <PasswordField fx:id="passwordField" layoutX="155.0" layoutY="323.0" prefHeight="37.0" prefWidth="270.0" promptText="Jelszó" />
+      <ImageView fitHeight="91.0" fitWidth="174.0" layoutX="245.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/kdr.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="301.0" layoutY="399.0" mnemonicParsing="false" onAction="#switchToRegisterWindow" styleClass="logreg" stylesheets="@../styles/style.css" text="Regisztráció" />
+   </children>
+</AnchorPane>

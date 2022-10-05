@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #FFE4B5;" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.GuiController">
+   <children>
+      <StackPane layoutX="247.0" layoutY="179.0" prefHeight="483.0" prefWidth="1000.0">
+         <children>
+            <Pane fx:id="pnl_profil" prefHeight="200.0" prefWidth="200.0" styleClass="pane">
+               <children>
+                  <Label layoutX="571.0" prefHeight="37.0" prefWidth="331.0" styleClass="bigLabel" text="ELŐZŐ ÜGYEIM" />
+                  <TableView fx:id="table" layoutX="486.0" layoutY="56.0" prefHeight="414.0" prefWidth="500.0">
+                     <columns>
+                        <TableColumn fx:id="col_teljesnev" prefWidth="125.0" text="Teljes név" />
+                        <TableColumn fx:id="col_ugy" prefWidth="125.0" text="Ügy" />
+                        <TableColumn fx:id="col_sorszam" prefWidth="100.0" text="Sorszám" />
+                        <TableColumn fx:id="col_idopont" prefWidth="147.0" text="Időpont" />
+                     </columns>
+                  </TableView>
+                  <GridPane layoutX="7.0" layoutY="64.0" prefHeight="414.0" prefWidth="496.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="60.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="30.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label alignment="BASELINE_LEFT" prefHeight="17.0" prefWidth="101.0" styleClass="infoLabel" text="Felhasználónév:" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label alignment="BASELINE_LEFT" prefHeight="17.0" prefWidth="77.0" styleClass="infoLabel" text="Email:" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label alignment="BASELINE_LEFT" prefHeight="17.0" prefWidth="77.0" styleClass="infoLabel" text="Jelszó:" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label alignment="BASELINE_LEFT" prefHeight="17.0" prefWidth="77.0" styleClass="infoLabel" text="Teljes név:" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label alignment="BASELINE_LEFT" prefHeight="17.0" prefWidth="100.0" styleClass="infoLabel" text="Születési dátum:" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label alignment="BASELINE_LEFT" prefHeight="17.0" prefWidth="124.0" styleClass="infoLabel" text="Személyigazolvány:" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label alignment="BASELINE_LEFT" prefHeight="17.0" prefWidth="109.0" styleClass="infoLabel" text="Lakcímkártya:" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label alignment="BASELINE_LEFT" prefHeight="17.0" prefWidth="77.0" styleClass="infoLabel" text="Tajkártya:" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Button fx:id="emailUpdate" mnemonicParsing="false" onAction="#updateData1" styleClass="modositbutton" text="Módosítás" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+                        <Button fx:id="passwordUpdate" mnemonicParsing="false" onAction="#updateData1" styleClass="modositbutton" text="Módosítás" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+                        <Button fx:id="szemelyiUpdate" mnemonicParsing="false" onAction="#updateData1" styleClass="modositbutton" text="Módosítás" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="TOP" />
+                        <Button fx:id="lakcimUpdate" mnemonicParsing="false" onAction="#updateData1" styleClass="modositbutton" text="Módosítás" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="TOP" />
+                        <Button fx:id="tajUpdate" mnemonicParsing="false" onAction="#updateData1" styleClass="modositbutton" text="Módosítás" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="TOP" />
+                        <TextField fx:id="profilUsernameLabel" GridPane.columnIndex="1" GridPane.valignment="TOP" />
+                        <TextField fx:id="profilEmailLabel" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+                        <TextField fx:id="profilPasswordLabel" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+                        <TextField fx:id="profilFullnameLabel" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+                        <TextField fx:id="profilSzuldatumLabel" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.valignment="TOP" />
+                        <TextField fx:id="profilSzemelyiLabel" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.valignment="TOP" />
+                        <TextField fx:id="profilLakcimLabel" GridPane.columnIndex="1" GridPane.rowIndex="6" GridPane.valignment="TOP" />
+                        <TextField fx:id="profilTajLabel" GridPane.columnIndex="1" GridPane.rowIndex="7" GridPane.valignment="TOP" />
+                        <Label fx:id="profilErrorLabel1" prefHeight="20.0" prefWidth="200.0" styleClass="errorLabel" textFill="#f80505" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
+                        <Label fx:id="profilErrorLabel" prefHeight="20.0" prefWidth="200.0" styleClass="errorLabel" textFill="#f80505" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+                        <Label fx:id="profilErrorLabel2" prefHeight="20.0" prefWidth="200.0" styleClass="errorLabel" textFill="#f80505" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.valignment="BOTTOM" />
+                        <Label fx:id="profilErrorLabel3" prefHeight="20.0" prefWidth="200.0" styleClass="errorLabel" textFill="#f80505" GridPane.columnIndex="1" GridPane.rowIndex="6" GridPane.valignment="BOTTOM" />
+                        <Label fx:id="profilErrorLabel4" prefHeight="20.0" prefWidth="200.0" styleClass="errorLabel" textFill="#f80505" GridPane.columnIndex="1" GridPane.rowIndex="7" GridPane.valignment="BOTTOM" />
+                     </children>
+                  </GridPane>
+               </children>
+            </Pane>
+            <GridPane fx:id="pnl_pult" prefHeight="483.0" prefWidth="353.0" styleClass="pane">
+               <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="6.0" prefWidth="225.0" styleClass="sorszamlabel" stylesheets="@../styles/style.css" text="AZ ÖN SORSZÁMA">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="3.0" prefWidth="225.0" styleClass="sorszamlabel" stylesheets="@../styles/style.css" text="VÁLASZTOTT ÜGY" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ugyLabel" alignment="CENTER" prefHeight="17.0" prefWidth="532.0" styleClass="sorszamKiiras" GridPane.rowIndex="3" />
+                  <Button fx:id="btn_pult" mnemonicParsing="false" onAction="#hide" styleClass="albutton" text="Vissza az ügyekhez" GridPane.rowIndex="4" />
+                  <Label fx:id="sorszamLabel" alignment="CENTER" prefHeight="17.0" prefWidth="398.0" styleClass="sorszamKiiras" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <GridPane fx:id="pnl_okt" styleClass="pane">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="diakhitelButton" mnemonicParsing="false" onAction="#display" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Diákhitel" />
+                  <Button fx:id="nyelvvButton" mnemonicParsing="false" onAction="#display" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Nyelvvizsga" GridPane.rowIndex="1" />
+                  <Button fx:id="erettButton" mnemonicParsing="false" onAction="#display" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Érettségi" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <GridPane fx:id="pnl_okm" styleClass="pane">
+               <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button fx:id="jogsiButton" mnemonicParsing="false" onAction="#display" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Jogosítvány" />
+                  <Button fx:id="diakButton" mnemonicParsing="false" onAction="#display" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Diákigazolvány" GridPane.rowIndex="1" />
+                  <Button fx:id="szemelyButton" mnemonicParsing="false" onAction="#display" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Személyigazolvány" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <GridPane fx:id="pnl_gep" styleClass="pane">
+               <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button fx:id="biztButton" mnemonicParsing="false" onAction="#display" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Kötelező biztosítás" />
+                  <Button fx:id="atirButton" mnemonicParsing="false" onAction="#display" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Átírás" GridPane.rowIndex="1" />
+                  <Button fx:id="eredetButton" mnemonicParsing="false" onAction="#display" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Eredetiségvizsga" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <GridPane fx:id="pnl_vall" styleClass="pane">
+               <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button fx:id="vallButton" mnemonicParsing="false" onAction="#display" prefHeight="40.0" prefWidth="199.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Egyéni vállalkozás" />
+                  <Button fx:id="cegButton" mnemonicParsing="false" onAction="#display" prefHeight="40.0" prefWidth="199.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Cég működtetés" GridPane.rowIndex="1" />
+                  <Button fx:id="munkaButton" mnemonicParsing="false" onAction="#display" prefHeight="40.0" prefWidth="199.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Munkavállalói bejelentés" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <GridPane fx:id="pnl_ege" styleClass="pane">
+               <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button fx:id="egeszsButton" mnemonicParsing="false" onAction="#display" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Egészségbiztosítás" />
+                  <Button fx:id="eesztButton" mnemonicParsing="false" onAction="#display" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="EESZT" GridPane.rowIndex="1" />
+                  <Button fx:id="vedettButton" mnemonicParsing="false" onAction="#display" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Védettségi igazolvány" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <GridPane styleClass="pane">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="72.0" prefWidth="616.0" styleClass="mainwindowlabels" stylesheets="@../styles/style.css" text="Az ügyintézés folytatásához válasszon a bal oldali menüsorból..." GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </children>
+      </StackPane>
+      <AnchorPane layoutY="40.0" prefHeight="680.0" prefWidth="248.0" style="-fx-background-color: #FFE4B5;">
+         <children>
+            <Button fx:id="btn_okt" alignment="BASELINE_LEFT" layoutX="41.0" layoutY="175.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="54.0" prefWidth="152.0" styleClass="ugybutton" stylesheets="@../styles/style.css" text="Oktatás">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/oktatas.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btn_okm" alignment="BASELINE_LEFT" layoutX="41.0" layoutY="229.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="54.0" prefWidth="152.0" styleClass="ugybutton" stylesheets="@../styles/style.css" text="Okmányok">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/okmany.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btn_gep" alignment="BASELINE_LEFT" layoutX="41.0" layoutY="283.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="54.0" prefWidth="152.0" styleClass="ugybutton" stylesheets="@../styles/style.css" text="Gépjármű">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/gepjarmu.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btn_vall" alignment="BASELINE_LEFT" layoutX="41.0" layoutY="337.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="54.0" prefWidth="152.0" styleClass="ugybutton" stylesheets="@../styles/style.css" text="Vállalkozás">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/vallalkozas.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btn_ege" alignment="BASELINE_LEFT" layoutX="41.0" layoutY="391.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="54.0" prefWidth="152.0" styleClass="ugybutton" stylesheets="@../styles/style.css" text="Egészségügy">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/korhaz.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="BASELINE_LEFT" layoutX="41.0" layoutY="579.0" mnemonicParsing="false" onAction="#switchToLoginWindow" prefHeight="54.0" prefWidth="152.0" styleClass="ugybutton" stylesheets="@../styles/style.css" text="Kijelentkezés">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/signout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="107.0" fitWidth="115.0" layoutX="41.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/kdr.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btn_profil" alignment="BASELINE_LEFT" layoutX="41.0" layoutY="532.0" mnemonicParsing="false" onAction="#sajatProfil" prefHeight="54.0" prefWidth="152.0" styleClass="ugybutton" stylesheets="@../styles/style.css" text="Saját profil">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/profil.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <HBox alignment="CENTER" layoutX="244.0" layoutY="41.0" prefHeight="139.0" prefWidth="1000.0" style="-fx-background-color: #FFE4B5;">
+         <children>
+            <Label fx:id="hboxLabel" alignment="CENTER" prefHeight="58.0" prefWidth="515.0" styleClass="bigLabel" text="ÜGYTÍPUSOK">
+               <font>
+                  <Font name="System Bold Italic" size="30.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutY="687.0" prefHeight="36.0" prefWidth="1280.0" style="-fx-background-color: #DEC69E;">
+         <children>
+            <Label alignment="CENTER" prefHeight="14.0" prefWidth="63.0" styleClass="infoLabel" text="VERZIÓ 1.0">
+               <HBox.margin>
+                  <Insets left="70.0" top="10.0" />
+               </HBox.margin>
+            </Label>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="296.0" styleClass="infoLabel" text="© 2022 - 2022 KDR Team - All Rights Reserved.">
+               <HBox.margin>
+                  <Insets left="800.0" top="10.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <Pane fx:id="titlePane" layoutX="-1.0" layoutY="-7.0" prefHeight="45.0" prefWidth="1280.0" style="-fx-background-color: #DEC69E;">
+         <children>
+            <Button contentDisplay="CENTER" layoutX="1240.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnClose" prefHeight="30.0" prefWidth="32.0" styleClass="titlebutton">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="21.0">
+                     <image>
+                        <Image url="@../images/close.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="BOTTOM" layoutX="1204.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnMinimize" prefHeight="30.0" prefWidth="32.0" styleClass="titlebutton">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="21.0">
+                     <image>
+                        <Image url="@../images/icons8_minimize_window_26px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView layoutX="14.0" layoutY="12.0">
+               <image>
+                  <Image url="@../images/icons8_k_26px_1.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="40.0" layoutY="12.0">
+               <image>
+                  <Image url="@../images/icons8_d_26px_1.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="66.0" layoutY="12.0">
+               <image>
+                  <Image url="@../images/icons8_r_26px_1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
